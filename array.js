@@ -4,9 +4,11 @@ const lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead 
 
 const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit"
 
-document.write(gotCitiesCSV);
+const got = gotCitiesCSV.split(",")
+document.write(got)
 
-document.write("<p>",bestThing, "</p>");
+const best = bestThing.split(" ")
+document.write("<p>",best, "</p>");
 
 const cities = lotrCitiesArray.join();
 document.write(lotrCitiesArray);  
@@ -26,3 +28,19 @@ document.write(only)
 const semi = gotCitiesCSV.split(",");
 const colin = semi.join(";")
 document.write("<p>", colin, "</p>")
+
+const matcity = []
+const newarr = gotCitiesCSV.split(",")
+for (let i = 0; i < newarr.length; i++) {
+    let city = newarr[i];
+    if (city.includes("aa") || city.includes("ee") || city.includes("ii") || city.includes("oo") || city.includes("uu")){
+        matcity.push(city);
+        
+    };
+}
+document.write("<p>", matcity, "</p>");
+
+const sort = lotrCitiesArray.sort(function(a, b){
+    return b.length - a.length;
+  });
+document.write(sort)
